@@ -1,4 +1,20 @@
-Hello World
-<br>Where is python language
-
-<b> is this in bold </b>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <title>Python in HTML</title>
+        <!-- Include PyScript CSS and JS -->
+        <link rel="stylesheet" href="https://pyscript.net" />
+        <script type="module" src="https://pyscript.net"></script>
+    </head>
+    <body>
+        <h1><b>This is a heading</b></h1>
+        <script type="py">
+            print("Hello from Python running in your browser!")
+        
+            # You can even import standard libraries
+            from datetime import datetime
+            print(f"Current time: {datetime.now()}")
+        </script>
+    </body>    
+    
+</html>
