@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name ="viewport" content="width=device-width", initial-scale="1.0">
+</head>
+
+<body>
+  <!-- Main heading and introduction -->
+  <h1>Welcome to Fredericton!</h1>
+  <p>Nestled along the shores of the <b>Wolastoq River</b> (previously known as the <i>St. John River</i>) in central New Brunswick
+    lies the capital city of Fredericton. First established here were the Wolastoqi, followed by the Acadians, New England Planters and Loyalists in the eighteenth and early nineteenth centruies. </p>
+  <p>As the capital region of the <em>only bilingual province</em> in Canada, Fredricton is rich in heritage and is known for its autumnal beauty, rich and diverse food scene and as a home for families.</p>
+
+  <!-- Internal navigation link points to the section with id="plan-visit" -->
+  <p><a href="#plan-visit">Jump to the Plan Your Visit form</a></p>
+  <hr>
+
+  <!-- Images with descriptive alternative text -->
+  <h2>Photos of Fredericton</h2>
+  <img src="../Assets/Images/Montreal-1.jpg" alt="A view of the Montréal skyline" width="320">
+  <img src="https://images.unsplash.com/photo-1470181942237-78ce33fec141" alt="A street scene in Old Montréal" width="320">
+  <p><small>Note: Image on the left is saved in website files locally and inserted using relative file path. Image on the right uses absolute filepath/URL.</small></p>
+
+  <!-- Unordered and ordered lists -->
+  <h2>Five Popular Attractions</h2>
+  <ul>
+    <li>Mount Royal Park</li>
+    <li>Old Montréal</li>
+    <li>Notre-Dame Basilica</li>
+    <li>Montréal Botanical Garden</li>
+    <li>Jean-Talon Market</li>
+  </ul>
+  <h2>Five Things to Do</h2>
+  <ol>
+    <li>Walk through Old Montréal.</li>
+    <li>Enjoy the view from Mount Royal.</li>
+    <li>Try a Montréal-style bagel.</li>
+    <li>Visit a local museum.</li>
+    <li>Explore a public market.</li>
+  </ol>
+
+  <!-- External links; target="_blank" opens a new tab -->
+  <h2>Useful Links</h2>
+  <p><a href="https://www.mtl.org/en">Official Montréal tourism website</a></p>
+  <p><a href="https://www.mtl.org/en" target="_blank">Explore Montréal tourism in a new tab</a></p>
+
+  <!-- Table: prices are illustrative, not current admission quotes -->
+  <h2>Attraction Information</h2>
+  <table border="1">
+    <caption>Sample admission prices (for HTML practice only)</caption>
+    <thead>
+      <tr><th scope="col">Attraction</th><th scope="col">Location</th><th scope="col">Admission Price</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Mount Royal Park</td><td>Mount Royal</td><td>Free</td></tr>
+      <tr><td>Notre-Dame Basilica</td><td>Old Montréal</td><td>Example: $15</td></tr>
+      <tr><td>Botanical Garden</td><td>Rosemont area</td><td>Example: $25</td></tr>
+    </tbody>
+  </table>
+
+  <hr>
+  <!-- Embedded video: iframe embeds a YouTube video; video ID may be replaced -->
+  <h2>Video Tour</h2>
+  <p>The example below embeds a video using HTML video tag. Using relative link; mp4 is saved locally.</p>
+  <video autoplay muted controls width="560"> 
+    <source src="../Assets/Videos/Montreal-Vid-1.mp4" type="video/mp4">
+  </video> 
+
+  <p>The example below embeds a video using an iframe. <br>
+    You can use this for youtube videos too but note that a youtube video will only work on Github pages (not when opening HTML file on local browser)</p>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/4bCy-F79llQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  
+  <!-- Embedded PDF: public sample PDF demonstrates the HTML technique -->
+  <h2>Embedded PDF</h2>
+  <p>Example PDF for practising embedding (replace with a Montréal brochure or map):</p>
+  <iframe src="https://pdfobject.com/pdf/sample.pdf" title="Example PDF document" width="560" height="350"></iframe>
+  
+  <!-- Form inputs are not submitted to a server in this HTML-only exercise -->
+  <h2 id="plan-visit">Plan Your Visit</h2>
+  <form action="#" method="get">
+    <label for="full-name">Full name:</label><br>
+    <input type="text" id="full-name" name="full_name" placeholder="Enter your name" required>
+    <br><br>
+    <label for="email">Email address:</label><br>
+    <input type="email" id="email" name="email" placeholder="name@example.com" required>
+    <br><br>
+    <label for="travel-date">Preferred travel date:</label><br>
+    <input type="date" id="travel-date" name="travel_date">
+    <br><br>
+    <label for="travellers">Number of travellers:</label><br>
+    <input type="number" id="travellers" name="travellers" min="1" value="1">
+    <br><br>
+    <label for="attraction">Favourite attraction:</label><br>
+      <select id="attraction" name="attraction">
+        <option value="mount-royal">Mount Royal Park</option>
+        <option value="old-montreal">Old Montréal</option>
+        <option value="basilica">Notre-Dame Basilica</option>
+      </select>
+    <br><br>
+    <!-- Checkboxes allow multiple selections -->
+    <fieldset>
+      <legend>Preferred activities (select any):</legend>
+      <label><input type="checkbox" name="activities" value="food"> Food</label><br>
+      <label><input type="checkbox" name="activities" value="museums"> Museums</label><br>
+      <label><input type="checkbox" name="activities" value="outdoors"> Outdoors</label>
+    </fieldset>
+    <br><br>
+    <!-- Radio buttons with the same name allow one selection -->
+    <fieldset>
+      <legend>Would you recommend this city?</legend>
+      <label><input type="radio" name="recommend" value="yes"> Yes</label><br>
+      <label><input type="radio" name="recommend" value="no"> No</label>
+    </fieldset>
+    <br><br>
+    <label for="comments">Additional comments:</label>
+    <textarea id="comments" name="comments" rows="4" cols="40" placeholder="Tell us more..."></textarea>
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+  </form>
+  
+</body>
+</html>
