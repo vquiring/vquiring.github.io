@@ -7,7 +7,7 @@
   --color-text: #0F172A;
   --color-muted: #475569;
   --color-bg: #F8FAFC;
-  --color-bg-alt: #f1f5fc;
+  --color-bg-alt: rgb(176, 179, 184);
   --color-border: #CBD5E1;
   --color-white: #FFFFFF;
 
@@ -15,7 +15,18 @@
   --font-heading: "Special Gothic Condensed One", sans-serif;
 }
 
-/* Header wrapper */
+/* Reset default browser spacing */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Main page wrapper */
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
 .header-bar {
   background-color: var(--color-bg);
   border-bottom: 1px solid var(--color-border);
@@ -70,4 +81,15 @@
 
 .main-navbar .navbar-toggler-icon {
   filter: invert(1);
+}
+
+/* Trying to alternate the colours on the sections throughout the site */
+section {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  padding: 4rem 0;
+}
+
+section:nth-of-type(even) {
+  background-color: var(--color-bg-alt);
 }
