@@ -17,15 +17,16 @@
 
 /* Reset default browser spacing */
 body {
-  margin: 10%;
+  margin: 0;
   padding: 0;
 }
 
 /* Main page wrapper */
 .container {
   width: 80%;
-  margin: 0 auto;
+  margin: 20% auto;
 }
+
 
 .header-bar {
   background-color: var(--color-bg);
