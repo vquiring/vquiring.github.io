@@ -2,37 +2,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name ="viewport" content="width=device-width", initial-scale="1.0">
+    <link rel="stylesheet" href="../Assets/css/mystyle.css">
 </head>
 
 <body>
   <!-- Main heading and introduction -->
-  <h1>Welcome to Fredericton!</h1>
-  <p>Nestled along the shores of the <b>Wolastoq River</b> (previously known as the <i>St. John River</i>) in central New Brunswick
+  <h1 class="text-color-yellow">Welcome to Fredericton!</h1>
+  <p id="heading-one">Nestled along the shores of the <b>Wolastoq River</b> (previously known as the <i>St. John River</i>) in central New Brunswick
     lies the capital city of Fredericton. First established here were the Wolastoqi, followed by the Acadians, New England Planters and Loyalists in the eighteenth and early nineteenth centruies. </p>
   <p>As the capital region of the <em>only bilingual province</em> in Canada, Fredricton is rich in heritage and is known for its autumnal beauty, rich and diverse food scene and as a home for families.</p>
 
-  <!-- Internal navigation link points to the section with id="plan-visit" -->
-  <p><a href="#plan-visit">Jump to the Plan Your Visit form</a></p>
+  <!-- Internal navigation link points to the section with id="plan-visit" same webpage but different section (anchoring) -->
+  <p><a href="#visit-us">Jump to the Plan Your Visit form</a></p>
   <hr>
 
   <!-- Images with descriptive alternative text -->
   <h2>Photos of Fredericton</h2>
-  <img src="../Assets/Images/Montreal-1.jpg" alt="A view of the Montréal skyline" width="320">
-  <img src="https://images.unsplash.com/photo-1470181942237-78ce33fec141" alt="A street scene in Old Montréal" width="320">
-  <p><small>Note: Image on the left is saved in website files locally and inserted using relative file path. Image on the right uses absolute filepath/URL.</small></p>
+  <img src="../Assets/Img/fall_fredericton.jpg" alt="A view overlooking Fredericton and the river" width="320">
+  <img src="https://www.historicplaster.com/wp-content/uploads/2020/10/New-Brunswick-Legislature.jpg" alt="A view of the provincial legislature in Fredericton" width="320">
 
-  <!-- Unordered and ordered lists -->
+
+  <!-- Unordered and ordered lists starting with attractions in no particular order and favourite things to do -->
   <h2>Five Popular Attractions</h2>
   <ul>
-    <li>Mount Royal Park</li>
-    <li>Old Montréal</li>
-    <li>Notre-Dame Basilica</li>
-    <li>Montréal Botanical Garden</li>
-    <li>Jean-Talon Market</li>
+    <li>Boyce Farmer's Market</li>
+    <li>Provincial Legislature</li>
+    <li>Christ Church Cathedral</li>
+    <li>King's Landing Historical Settlement</li>
+    <li>Harvest Blues Festival</li>
   </ul>
   <h2>Five Things to Do</h2>
   <ol>
-    <li>Walk through Old Montréal.</li>
+    <li>Walk along the river in Fall.</li>
     <li>Enjoy the view from Mount Royal.</li>
     <li>Try a Montréal-style bagel.</li>
     <li>Visit a local museum.</li>
@@ -75,8 +76,8 @@
   <p>Example PDF for practising embedding (replace with a Montréal brochure or map):</p>
   <iframe src="https://pdfobject.com/pdf/sample.pdf" title="Example PDF document" width="560" height="350"></iframe>
   
-  <!-- Form inputs are not submitted to a server in this HTML-only exercise -->
-  <h2 id="plan-visit">Plan Your Visit</h2>
+  <!-- Form inputs are not submitted to a server in this HTML-only exercise Must add id in the heading to put the ID you used to create your section anchors-->
+  <h2 id="visit-us">Plan Your Visit</h2>
   <form action="#" method="get">
     <label for="full-name">Full name:</label><br>
     <input type="text" id="full-name" name="full_name" placeholder="Enter your name" required>
