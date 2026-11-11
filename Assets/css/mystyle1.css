@@ -114,3 +114,9 @@ section:nth-of-type(even) {
   border-left: 4px solid var(--color-accent);
   border-radius: 4px;
 }
+.footer {
+  text-align: center;
+  padding: 3px;
+  background-color: var(--color-primary);
+  color: var(--color-muted);
+}
