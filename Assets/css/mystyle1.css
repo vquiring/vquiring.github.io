@@ -42,7 +42,7 @@ body {
 /* Brand name */
 .navbar-name {
   font-family: var(--font-heading);
-  font-size: 1.75rem;
+  font-size: 2rem;
   letter-spacing: 0.08em;
   color: var(--color-white);
 }
