@@ -27,6 +27,10 @@ body {
   margin: 0, auto;
 }
 
+.main-body {
+  width:auto;
+  margin-left: 10%;
+}
 
 .header-bar {
   background-color: var(--color-bg);
