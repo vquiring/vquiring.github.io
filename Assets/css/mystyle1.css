@@ -23,11 +23,11 @@ body {
 
 /* Main page wrapper */
 .container {
-  width: 80%;
+  width: fit-content;
   margin: 0, auto;
 }
 
-.main-body {
+.main-text {
   width:auto;
   margin-left: 10%;
 }
