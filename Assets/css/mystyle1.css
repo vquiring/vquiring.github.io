@@ -23,7 +23,7 @@ body {
 
 /* Main page wrapper */
 .container {
-  width: fit-content;
+  width: 80;
   margin: 0, auto;
 }
 
@@ -120,6 +120,7 @@ section:nth-of-type(even) {
   border-radius: 4px;
 }
 .footer {
+  width: 0;
   text-align: center;
   padding: 3px;
   background-color: var(--color-primary);
