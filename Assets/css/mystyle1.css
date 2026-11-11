@@ -734,3 +734,49 @@ ul {
     animation-duration: 0.01ms !important;
   }
 }
+
+.chronology-item {
+  position: relative;
+}
+
+.chronology-content {
+  padding: 16px;
+}
+
+.text-and-image {
+  display: flex;
+  flex-direction: row;
+  align-items: center;   /* vertically centers the text and logo */
+  gap: 16px;
+}
+
+.text-description {
+  flex: 1;               /* text fills the remaining width */
+  order: 1;              /* appears first (left) */
+}
+
+.img-container {
+  order: 2;              /* appears after the text (right) */
+  flex-shrink: 0;        /* keeps the logo from shrinking */
+}
+
+.institution {
+  margin: 0 0 4px;
+}
+
+.degree {
+  margin: 0 0 8px;
+  font-weight: normal;
+}
+
+.institution-logo {
+  display: block;
+  width: 100px;
+  height: auto;
+}
+
+.institution-logo img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
