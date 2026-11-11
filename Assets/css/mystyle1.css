@@ -93,3 +93,24 @@ section {
 section:nth-of-type(even) {
   background-color: var(--color-bg-alt);
 }
+
+/* Chronology container */
+.chronology {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+}
+
+.chronology-item {
+  padding: 1.25rem 1.5rem;
+  background-color: var(--color-bg);
+  border-left: 4px solid var(--color-accent);
+  border-radius: 4px;
+}
