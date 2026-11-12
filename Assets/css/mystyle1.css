@@ -125,3 +125,6 @@ section:nth-of-type(even) {
   margin-top: 5rem;
   margin-bottom: 5rem;
 }
+.chronology-item {
+  margin-bottom: 2rem;
+}
