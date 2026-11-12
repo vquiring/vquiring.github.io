@@ -21,11 +21,6 @@ body {
   padding: 0
 }
 
-/* Main page wrapper */
-.container {
-  width: 80%;
-  margin: 0, auto;
-}
 
 .main-text {
   margin-left: 10%;
@@ -119,9 +114,10 @@ section:nth-of-type(even) {
   border-left: 4px solid var(--color-accent);
   border-radius: 4px;
 }
+
 .footer {
   text-align: center;
-  padding: 3px;
+  padding: 3px 10%;
   background-color: var(--color-primary);
   color: var(--color-muted);
 }
