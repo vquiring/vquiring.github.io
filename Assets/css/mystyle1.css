@@ -128,3 +128,24 @@ section:nth-of-type(even) {
 .chronology-item {
   margin-bottom: 2rem;
 }
+.container {
+  display: flex;
+  background-color: var(--color-bg);
+}
+
+.container div {
+  background-color: var(--color-primary-dark);
+  margin: 10px;
+  padding: 20px;
+  font-size: 24px;
+}
+
+p {
+  font-family: var(--font-base);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+}
