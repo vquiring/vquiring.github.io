@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body class="container">
-<!-- aria-label added in for accessibility readers-->
+<!-- aria-label added in for accessibility readers recommended following validation of code-->
     <header class="header-bar">
   <nav class="navbar navbar-expand-lg navbar-dark main-navbar" aria-label="Main navigation">
     <!-- Logo and name -->
@@ -50,12 +50,10 @@
   </nav>
 </header>
 <main>
-    <h1>Do you have a project idea? Let's discuss!</h1>
-    <p>Whether just to chat or discuss a specific project, I am happy to hear from you. Community in the information community is an invaluable resource. Whether you want to chat cataloging and metadata or data mining and information architecture or just chat about volunteer opportunities, contact me through the form below.</p>
 <div class="container">
   <div style="text-align:center">
-    <h2>Contact Us</h2>
-    <p>Swing by for a cup of coffee, or leave us a message:</p>
+    <h2>Contact Me</h2>
+    <p>Do you have an information architecture or metadata project idea? Want to learn more about the legal information community? Let's chat:</p>
   </div>
   <div class="row">
     <div class="column">
@@ -67,12 +65,9 @@
         <input type="text" id="fname" name="firstname" placeholder="Your name..">
         <label for="lname">Last Name</label>
         <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-        <label for="country">Country</label>
-        <select id="country" name="country">
-          <option value="australia">Australia</option>
-          <option value="canada">Canada</option>
-          <option value="usa">USA</option>
-        </select>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your email...">
+        </input>
         <label for="subject">Subject</label>
         <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
         <input type="submit" value="Submit">
