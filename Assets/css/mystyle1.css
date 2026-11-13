@@ -11,8 +11,22 @@
   --color-border: #CBD5E1;
   --color-white: #FFFFFF;
 
+  
+
   --font-base: "Inter", sans-serif;
   --font-heading: "Special Gothic Condensed One", sans-serif;
+}
+/* Dark mode: swap the theme variables so all sections and cards switch too */
+.dark-mode {
+  --color-bg: #0F172A;
+  --color-bg-alt: #1E293B;
+  --color-white: #1E293B;
+  --color-text: #F8FAFC;
+  --color-border: #334155;
+  --color-muted: #94A3B8;
+
+  background-color: #000000;
+  color: #F8FAFC;
 }
 
 /* Reset default browser spacing */
