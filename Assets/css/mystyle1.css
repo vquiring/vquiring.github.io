@@ -174,13 +174,13 @@ h4 {font-size: 14px;}
 /* Container for skill bars */
 .container-skills {
   width: 100%; /* Full width */
-  background-color: var(--color-bg);
+  background-color: var(--color-border);
 
 }
 
 .skills {
   text-align: right; /* Right-align text */
-  padding-top: 2px; /* Add top padding */
+  padding-top: 1px; /* Add top padding */
   padding-bottom: 2px; /* Add bottom padding */
   color: black; /* White text color */
 }
@@ -188,7 +188,7 @@ h4 {font-size: 14px;}
 .html {width: 60%; background-color: var(--color-accent);} /* Green */
 .css {width: 80%; background-color: var(--color-accent);} /* Blue */
 .js {width: 65%; background-color: var(--color-accent);} /* Red */
-.php {width: 60%; background-color: var(--color-primary);} /* Dark Grey */
+.php {width: 60%; background-color: var(--color-accent);} /* Dark Grey */
 
 * {
   box-sizing: border-box;
