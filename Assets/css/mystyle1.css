@@ -27,10 +27,6 @@ body {
   line-height: 1.6
 }
 
-.content-wrapper {
-  margin: 0;    /* Centers the text box horizontally */
-  padding-left: 40px;     /* Adds padding so text doesn't touch edges on mobile */
-}
 
 .header-bar {
   background-color: var(--color-bg);
