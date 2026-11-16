@@ -282,17 +282,26 @@ input[type=submit]:hover {
   float: right;
 }
 
-.active:after {
+.active.accordion:after {
   content: "\2796"; /* Unicode character for "minus" sign (-) */
   color: var(--color-accent)
 }
 
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 40px;
+}
 /*To create flip card for portfolio projects with each card flipping for a description of the project*/
 .flip-card {
+
   background-color: transparent;
   width: 300px;
   height: 300px;
   perspective: 1000px;
+
 }
 
 .flip-card-inner {
