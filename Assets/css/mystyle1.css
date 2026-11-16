@@ -16,20 +16,7 @@
   --font-base: "Inter", sans-serif;
   --font-heading: "Special Gothic Condensed One", sans-serif;
 
-  
-.theme-a {
-  background: var(--color-bg);
-  color: var(--color-primary);
-}
-@media (prefers-color-scheme: dark) {
-  .theme-a.adaptive {
-    background: black;
-    color: var(--color-primary-dark);
-    outline: 5px dashed black;
-  }
-}
-}
-root.dark-mode
+
   
 
 /* Reset default browser spacing */
@@ -38,9 +25,10 @@ body {
   padding: 0;
 }
 
-.main-text {
-  max-width: 80%;
-  padding: 20px;
+.content-wrapper {
+  max-width: 800px;  /* Limits how wide the text can stretch */
+  margin: 0 auto;    /* Centers the text box horizontally */
+  padding: 20px;     /* Adds padding so text doesn't touch edges on mobile */
 }
 
 .header-bar {
@@ -330,11 +318,11 @@ input[type=submit]:hover {
 
 .flip-card-front {
   background-color: var(--color-primary);
-  color: var(--color-text);
+  color: var(--color-white);
 }
 
 .flip-card-back {
   background-color: var(--color-accent);
   color: var(--color-text);
   transform: rotateY(180deg);
-}
+}}
