@@ -36,6 +36,8 @@ root.dark-mode
 body {
   margin: 0;
   padding: 0;
+  max-width: 60%;  /* Leaves 40% total space (20% on each side) */
+  padding: 20px;   /* Optional: adds a safety cushion for mobile screens */
 }
 
 .main-text {
