@@ -197,7 +197,8 @@ margin:20%
 /* Container for skill bars */
 .container-skills {
   width: 80%; /* Full width */
-  background-color: var(--color-bg); /* Grey background */
+  background-color: var(--color-bg);
+  margin: 20% /* Grey background */
 }
 
 .skills {
