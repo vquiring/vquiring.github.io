@@ -103,7 +103,7 @@ section:nth-of-type(even) {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  max-width: 60%;
+  max-width: 1600px;
   padding: 2rem;
   background-color: var(--color-white);
   border: 1px solid var(--color-border);
