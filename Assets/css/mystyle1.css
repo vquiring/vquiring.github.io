@@ -100,6 +100,11 @@ section:nth-of-type(even) {
   background-color: var(--color-muted);
 }
 
+/*Add info to cliackable links */
+.list-cert a {
+  text-decoration: underline;
+}
+
 /* Chronology container  in order to list education and work experience in similar box layout.*/
 .chronology-item {
   display: flex;
