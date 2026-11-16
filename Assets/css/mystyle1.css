@@ -117,8 +117,7 @@ section:nth-of-type(even) {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: 60%;
   padding: 2rem;
   background-color: var(--color-white);
   border: 1px solid var(--color-border);
@@ -143,15 +142,11 @@ section:nth-of-type(even) {
 .section-title {
   margin-top: 5rem;
   margin-bottom: 5rem;
-  margin-left: 10%;
-  margin-right: 10%;
 }
 
 .about {
   margin-top: 5rem;
   margin-bottom: 5rem;
-  margin-left: 10%;
-  margin-right: 10%;
 }
 
 .container {
@@ -170,8 +165,6 @@ section:nth-of-type(even) {
 
 p {
   font-family: var(--font-base);
-  padding: 10px;
-  margin-left: 20%;
   font-size: 10px;
 }
 
@@ -190,17 +183,13 @@ h3 {font-size: 16px;}
 
 h4 {font-size: 14px;}
 
-/*Setting margin for list to 20% */
-.list-cert {
-margin:20%
-}
 
 
 /* Container for skill bars */
 .container-skills {
   width: 80%; /* Full width */
   background-color: var(--color-bg);
-  margin: 20% /* Grey background */
+
 }
 
 .skills {
@@ -302,7 +291,6 @@ input[type=submit]:hover {
   font-size: 13px;
   color: var(--color-accent);
   float: right;
-  margin-left: 5px;
 }
 
 .active:after {
