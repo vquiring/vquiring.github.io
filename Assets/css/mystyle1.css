@@ -29,8 +29,8 @@ body {
 
 .content-wrapper {
   max-width: 800px;  /* Limits how wide the text can stretch */
-  margin: 10%;    /* Centers the text box horizontally */
-  padding: 20px;     /* Adds padding so text doesn't touch edges on mobile */
+  margin: 0;    /* Centers the text box horizontally */
+  padding: 40px;     /* Adds padding so text doesn't touch edges on mobile */
 }
 
 .header-bar {
