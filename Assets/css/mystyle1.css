@@ -15,6 +15,7 @@
 
   --font-base: "Inter", sans-serif;
   --font-heading: "Special Gothic Condensed One", sans-serif;
+}
 
 
   
@@ -144,7 +145,7 @@ section:nth-of-type(even) {
 }
 .container div {
   background-color: #f1f1f1;
-  border: 1px solid --color-primary;
+  border: 1px solid var(--color-primary);
   padding: 10px;
   font-size: 30px;
   text-align: center;
@@ -262,7 +263,7 @@ input[type=submit]:hover {
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .accordion:hover {
+.active.accordion, .accordion:hover {
   background-color: var(--color-bg);
 }
 
@@ -327,4 +328,4 @@ input[type=submit]:hover {
   background-color: var(--color-accent);
   color: var(--color-text);
   transform: rotateY(180deg);
-}}
+}
