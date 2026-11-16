@@ -4,14 +4,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const toggle = document.getElementById('darkModeToggle');
 
     // Apply the saved preference as soon as the page loads
-    function applyTheme(isDark) {
+function applyTheme(isDark) {
         body.classList.toggle('dark-mode', isDark);
         if (toggle) {
             toggle.setAttribute('aria-pressed', String(isDark));
         }
     }
 
-    applyTheme(localStorage.getItem('darkMode') === 'true');
+applyTheme(localStorage.getItem('darkMode') === 'true');
 
     // Toggle and save the choice so it carries across pages
     if (toggle) {
@@ -36,7 +36,7 @@ for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
     /* Toggle between adding and removing the "active" class,
     to highlight the button that controls the panel */
-    this.classList.toggle("active");
+    this.classList.toggle("active.accordion");
 
     /* Toggle between hiding and showing the active panel */
     var panel = this.nextElementSibling;
