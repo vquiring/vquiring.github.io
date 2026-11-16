@@ -29,6 +29,7 @@
   }
 }
 }
+root.dark-mode
   
 
 /* Reset default browser spacing */
@@ -109,7 +110,7 @@ section:nth-of-type(even) {
   background-color: var(--color-bg-alt);
 }
 
-/* Chronology container */
+/* Chronology container  in order to list education and work experience in similar box layout.*/
 .chronology-item {
   display: flex;
   flex-direction: column;
@@ -180,21 +181,21 @@ h3 {
 
 /* Container for skill bars */
 .container-skills {
-  width: 100%; /* Full width */
-  background-color: var(--color-bg-alt); /* Grey background */
+  width: 80%; /* Full width */
+  background-color: var(--color-bg); /* Grey background */
 }
 
 .skills {
   text-align: right; /* Right-align text */
   padding-top: 10px; /* Add top padding */
   padding-bottom: 10px; /* Add bottom padding */
-  color: white; /* White text color */
+  color: black; /* White text color */
 }
 
-.html {width: 60%; background-color: var(--color-bg);} /* Green */
-.css {width: 80%; background-color: var(--color-bg);} /* Blue */
-.js {width: 65%; background-color: var(--color-bg);} /* Red */
-.php {width: 60%; background-color: var(--color-bg);} /* Dark Grey */
+.html {width: 60%; background-color: var(--color-accent);} /* Green */
+.css {width: 80%; background-color: var(--color-accent);} /* Blue */
+.js {width: 65%; background-color: var(--color-accent);} /* Red */
+.php {width: 60%; background-color: var(--color-primary);} /* Dark Grey */
 
 * {
   box-sizing: border-box;
