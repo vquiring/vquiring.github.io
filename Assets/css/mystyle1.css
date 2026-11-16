@@ -92,7 +92,6 @@ body {
 section {
   background-color: var(--color-bg);
   color: var(--color-text);
-  padding: 4rem 0;
 }
 
 section:nth-of-type(even) {
@@ -291,6 +290,7 @@ input[type=submit]:hover {
   color: var(--color-accent)
 }
 
+/*To create flip card for portfolio projects with each card flipping for a description of the project*/
 .card-container {
   display: flex;
   justify-content: center;
@@ -298,9 +298,8 @@ input[type=submit]:hover {
   flex-wrap: wrap;
   padding: 40px;
 }
-/*To create flip card for portfolio projects with each card flipping for a description of the project*/
-.flip-card {
 
+.flip-card {
   background-color: transparent;
   width: 300px;
   height: 300px;
