@@ -144,12 +144,12 @@ section:nth-of-type(even) {
 .container {
   display: grid;
   grid-template-columns: auto auto auto;
-  background-color: dodgerblue;
+  background-color: var(--color-primary);
   padding: 10px;
 }
 .container div {
   background-color: #f1f1f1;
-  border: 1px solid black;
+  border: 1px solid --color-primary;
   padding: 10px;
   font-size: 30px;
   text-align: center;
@@ -169,7 +169,7 @@ h3 {
 /* Container for skill bars */
 .container-skills {
   width: 100%; /* Full width */
-  background-color: #ddd; /* Grey background */
+  background-color: var(--color-bg-alt); /* Grey background */
 }
 
 .skills {
@@ -179,10 +179,10 @@ h3 {
   color: white; /* White text color */
 }
 
-.html {width: 60%; background-color: #04AA6D;} /* Green */
-.css {width: 80%; background-color: #2196F3;} /* Blue */
-.js {width: 65%; background-color: #f44336;} /* Red */
-.php {width: 60%; background-color: #808080;} /* Dark Grey */
+.html {width: 60%; background-color: var(--color-bg);} /* Green */
+.css {width: 80%; background-color: var(--color-bg);} /* Blue */
+.js {width: 65%; background-color: var(--color-bg);} /* Red */
+.php {width: 60%; background-color: var(--color-bg);} /* Dark Grey */
 
 * {
   box-sizing: border-box;
@@ -199,7 +199,7 @@ input[type=text], select, textarea {
 }
 
 input[type=submit] {
-  background-color: #04AA6D;
+  background-color: var(--color-primary);
   color: white;
   padding: 12px 20px;
   border: none;
@@ -207,13 +207,13 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color: #45a049;
+  background-color: var(--color-accent);
 }
 
 /* Style the container/contact section */
 .container {
   border-radius: 5px;
-  background-color: #f2f2f2;
+  background-color: var(--color-muted);
   padding: 10px;
 }
 
@@ -275,5 +275,5 @@ input[type=submit]:hover {
 
 .active:after {
   content: "\2796"; /* Unicode character for "minus" sign (-) */
-  color: --color-accent
+  color: var(--color-accent)
 }
