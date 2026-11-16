@@ -266,6 +266,7 @@ input[type=submit]:hover {
 }
 .accordion:after {
   content: '\02795'; /* Unicode character for "plus" sign (+) */
+
   font-size: 13px;
   color: #777;
   float: right;
@@ -274,4 +275,5 @@ input[type=submit]:hover {
 
 .active:after {
   content: "\2796"; /* Unicode character for "minus" sign (-) */
+  color: --color-accent
 }
