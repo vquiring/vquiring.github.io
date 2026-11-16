@@ -188,6 +188,11 @@ h3 {font-size: 16px;}
 
 h4 {font-size: 14px;}
 
+/*Setting margin for list to 20% */
+.list-cert {
+margin:20%
+}
+
 
 /* Container for skill bars */
 .container-skills {
