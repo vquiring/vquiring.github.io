@@ -29,7 +29,7 @@ body {
 
 .content-wrapper {
   margin: 0;    /* Centers the text box horizontally */
-  padding: 0, 40px;     /* Adds padding so text doesn't touch edges on mobile */
+  padding-left: 40px;     /* Adds padding so text doesn't touch edges on mobile */
 }
 
 .header-bar {
