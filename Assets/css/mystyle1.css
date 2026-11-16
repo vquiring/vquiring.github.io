@@ -16,18 +16,25 @@
   --font-base: "Inter", sans-serif;
   --font-heading: "Special Gothic Condensed One", sans-serif;
 
-  color-scheme: light dark;
+  
+.theme-a {
+  background: var(--color-bg);
+  color: var(--color-primary);
 }
+@media (prefers-color-scheme: dark) {
+  .theme-a.adaptive {
+    background: black;
+    color: var(--color-primary-dark);
+    outline: 5px dashed black;
+  }
+}
+}
+  
 
 /* Reset default browser spacing */
 body {
   margin: 0;
   padding: 0;
-}
-
-  .dark-mode {
-  background-color: black;
-  color: white;
 }
 
 .main-text {
