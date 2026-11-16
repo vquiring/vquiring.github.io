@@ -28,9 +28,8 @@ body {
 }
 
 .content-wrapper {
-  max-width: 800px;  /* Limits how wide the text can stretch */
   margin: 0;    /* Centers the text box horizontally */
-  padding: 40px;     /* Adds padding so text doesn't touch edges on mobile */
+  padding: 0, 40px;     /* Adds padding so text doesn't touch edges on mobile */
 }
 
 .header-bar {
@@ -193,10 +192,10 @@ h4 {font-size: 20px;}
   color: var(--color-text); /* White text color */
 }
 
-.html {width: 60%; background-color: var(--color-accent);} /* Green */
-.css {width: 80%; background-color: var(--color-accent);} /* Blue */
-.js {width: 65%; background-color: var(--color-accent);} /* Red */
-.php {width: 60%; background-color: var(--color-accent);} /* Dark Grey */
+.novice {width: 50%; background-color: var(--color-accent);} /* Green */
+.competent {width: 60%; background-color: var(--color-accent);} /* Blue */
+.proficient {width: 75%; background-color: var(--color-accent);} /* Red */
+.expert {width: 100%; background-color: var(--color-accent);} /* Dark Grey */
 
 * {
   box-sizing: border-box;
