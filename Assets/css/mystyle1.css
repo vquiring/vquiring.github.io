@@ -97,7 +97,7 @@ section {
 }
 
 section:nth-of-type(even) {
-  background-color: var(--color-bg-alt);
+  background-color: var(--color-muted);
 }
 
 /* Chronology container  in order to list education and work experience in similar box layout.*/
