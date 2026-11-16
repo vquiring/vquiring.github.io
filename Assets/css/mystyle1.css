@@ -242,7 +242,7 @@ input[type=submit]:hover {
 /* Style the container/contact section */
 .container-contact {
   border-radius: 5px;
-  background-color: var(--color-muted);
+  background-color: var(--color-bg);
   padding: 10px;
 }
 
@@ -252,6 +252,7 @@ input[type=submit]:hover {
   width: 50%;
   margin-top: 6px;
   padding: 20px;
+  background-color: var(--color-bg-alt);
 }
 
 /* Clear floats after the columns */
