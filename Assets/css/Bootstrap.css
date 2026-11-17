@@ -1,0 +1,380 @@
+/* ========================================================================
+mystyle_bootstrap.css â€” Bootstrap 5.3 Website Theme Overrides
+   ========================================================================
+   1. Load Bootstrap CSS from its CDN FIRST.
+   2. Load THIS file AFTER Bootstrap.
+   3. Edit the values in SECTION A to personalize your website.
+   4. Look for "EDIT HERE" comments for occasional component-specific tweaks.
+   5. The --bs-* declarations below map your brand settings into Bootstrap;
+      normally change the --site-* values instead of editing those mappings.
+
+   Note: Bootstrap 5.3 compiles some colors into component-specific rules.
+   This stylesheet updates those common rules as well as CSS variables.
+   ======================================================================== */
+
+/* ========================================================================
+   A. YOUR DESIGN SETTINGS â€” EDIT THESE FIRST
+   Brand values live here; each variable explains which site elements it affects.
+   RGB channels are comma-separated and must match the corresponding hex colour.
+   ======================================================================== */
+:root{
+  /* Brand palette */
+  --site-primary: #1e3a5f; /* EDIT: main brand colour; primary buttons, coloured links, backgrounds and component accents */
+  --site-primary-hover: #0D9488; /* EDIT: primary hover colour; hovered buttons and links */
+  --site-primary-active: #0D9488; /* EDIT: pressed/selected primary button colour */
+  --site-primary-rgb: rgb(30, 58, 95); /* EDIT: RGB channels matching --site-primary; opacity backgrounds, borders and focus effects */
+  --site-secondary: #64748b; /* EDIT: secondary brand colour; secondary buttons and utility classes */
+  --site-secondary-hover: #475569; /* EDIT: hover state for secondary buttons and links */
+  --site-secondary-active: #334155; /* EDIT: pressed/selected secondary buttons */
+  --site-secondary-rgb: 100, 116, 139; /* EDIT: RGB channels matching --site-secondary; translucent secondary utilities */
+
+  /* Semantic colors â€” adjust to match your brand */
+  --site-success: #198754; /* EDIT: success/confirmation status colour */
+  --site-success-rgb: 25, 135, 84; /* EDIT: RGB channels matching success colour */
+  --site-info: #0dcaf0; /* EDIT: information status colour */
+  --site-info-rgb: 13, 202, 240; /* EDIT: RGB channels matching information colour */
+  --site-warning: #ffc107; /* EDIT: caution/warning status colour; check text contrast */
+  --site-warning-rgb: 255, 193, 7; /* EDIT: RGB channels matching warning colour */
+  --site-danger: #dc3545; /* EDIT: error/destructive-action status colour */
+  --site-danger-rgb: 220, 53, 69; /* EDIT: RGB channels matching danger colour */
+
+  /* Backgrounds and text */
+  --site-body-bg: #dbb6b6; /* EDIT: overall page background */
+  --site-surface: #ffffff; /* EDIT: cards, forms, modals and accordion backgrounds */
+  --site-surface-muted: #f8fafc; /* EDIT: shaded sections, card headers, dropdown hover and footer */
+  --site-text: #212529; /* EDIT: default paragraph/body and table text */
+  --site-text-muted: #64748b; /* EDIT: subdued labels, footer text and .text-muted */
+  --site-heading: #111827; /* EDIT: all heading text (h1â€“h6), navbar brand */
+  --site-border: #dee2e6; /* EDIT: cards, forms, tables and component borders */
+  --site-link: #e91c4c;; /* EDIT: regular hyperlinks; usually follows primary brand colour */
+  --site-link-hover: #451ccc;; /* EDIT: hyperlinks on mouse hover */
+
+  /* Fonts and sizing */
+  --site-font: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; /* EDIT: body text font stack, form and Bootstrap body font */
+  --site-heading-font: var(--site-font); /* EDIT: font for headings h1â€“h6 */
+  --site-base-size: 1rem; /* EDIT: body text size; rem-based sizes depend on root font size */
+  --site-line-height: 1.6; /* EDIT: body paragraph line spacing */
+  --site-h1-size: clamp(2rem, 4vw, 3rem); /* EDIT: H1 heading size, responsive via clamp() */
+  --site-h2-size: clamp(1.75rem, 3vw, 2.5rem); /* EDIT: H2 heading size, responsive via clamp() */
+  --site-h3-size: clamp(1.4rem, 2.5vw, 2rem); /* EDIT: H3 heading size, responsive via clamp() */
+  --site-h4-size: 1.5rem; /* EDIT: H4 heading size */
+  --site-h5-size: 1.25rem; /* EDIT: H5 heading size */
+  --site-h6-size: 1rem; /* EDIT: H6 heading size */
+  --site-heading-weight: 700; /* EDIT: heading boldness; 400 normal, 600 semibold, 700 bold */
+
+  /* Layout and surfaces */
+  --site-radius: 0.5rem; /* EDIT: rounded corners on buttons, form fields, dropdowns and accordions */
+  --site-radius-lg: 0.85rem; /* EDIT: rounded corners on cards, modals and .site-radius-lg */
+  --site-control-padding-y: 0.55rem; /* EDIT: vertical padding inside buttons */
+  --site-control-padding-x: 1rem; /* EDIT: horizontal padding inside buttons */
+  --site-section-spacing: 4rem; /* EDIT: top/bottom padding on elements using .site-section */
+  --site-shadow: 0 0.2rem 0.75rem rgba(15, 23, 42, 0.08); /* EDIT: shadow for elements using .site-shadow */
+  --site-shadow-lg: 0 0.75rem 2rem rgba(15, 23, 42, 0.12); /* EDIT: larger shadow for elements using .site-shadow-lg */
+  --site-focus-ring: rgba(var(--site-primary-rgb), 0.25); /* EDIT: keyboard-focus glow on fields, pagination and controls */
+
+  /* Bootstrap core variables */
+  --bs-primary: var(--site-primary);
+  --bs-primary-rgb: var(--site-primary-rgb);
+  --bs-secondary: var(--site-secondary);
+  --bs-secondary-rgb: var(--site-secondary-rgb);
+  --bs-success: var(--site-success);
+  --bs-success-rgb: var(--site-success-rgb);
+  --bs-info: var(--site-info);
+  --bs-info-rgb: var(--site-info-rgb);
+  --bs-warning: var(--site-warning);
+  --bs-warning-rgb: var(--site-warning-rgb);
+  --bs-danger: var(--site-danger);
+  --bs-danger-rgb: var(--site-danger-rgb);
+  --bs-body-bg: var(--site-body-bg);
+  --bs-body-bg-rgb: 255, 255, 255; /* EDIT HERE: RGB values MUST match --site-body-bg for Bootstrap opacity utilities */
+  --bs-body-color: var(--site-text);
+  --bs-border-color: var(--site-border);
+  --bs-border-radius: var(--site-radius);
+  --bs-border-radius-lg: var(--site-radius-lg);
+  --bs-font-sans-serif: var(--site-font);
+  --bs-body-font-family: var(--site-font);
+  --bs-body-font-size: var(--site-base-size);
+  --bs-body-line-height: var(--site-line-height);
+  --bs-link-color: var(--site-link);
+  --bs-link-hover-color: var(--site-link-hover);
+  --bs-link-color-rgb: var(--site-primary-rgb);
+  --bs-link-hover-color-rgb: var(--site-primary-rgb); /* EDIT HERE if hover colour differs from primary: use matching RGB triplet */
+  --bs-focus-ring-color: var(--site-focus-ring);
+}
+
+/* ========================================================================
+   B. TYPOGRAPHY AND LINKS
+   ======================================================================== */
+/* Body: applies site font, size, line spacing, text and page background; edit --site-* settings in Section A. */
+body {
+  font-family: var(--site-font);
+  font-size: var(--site-base-size);
+  line-height: var(--site-line-height);
+  color: var(--site-text);
+  background: var(--site-body-bg);
+}
+/* Headings: typography and colour for HTML headings and Bootstrap .h1â€“.h6; edit Section A (line-height is 1.2 here). */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: var(--site-heading-font);
+  font-weight: var(--site-heading-weight);
+  color: var(--site-heading);
+  line-height: 1.2;
+}
+h1, .h1 { font-size: var(--site-h1-size); }
+h2, .h2 { font-size: var(--site-h2-size); }
+h3, .h3 { font-size: var(--site-h3-size); }
+h4, .h4 { font-size: var(--site-h4-size); }
+h5, .h5 { font-size: var(--site-h5-size); }
+h6, .h6 { font-size: var(--site-h6-size); }
+small, .small { font-size: 0.875em; }
+.text-muted { color: var(--site-text-muted) !important; }
+a { color: var(--site-link); }
+a:hover { color: var(--site-link-hover); }
+/* Keyboard focus outline for links and buttons: uses primary brand colour; EDIT HERE for outline thickness/offset. */
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible { outline: 2px solid var(--site-primary); outline-offset: 2px; }
+
+/* ========================================================================
+   C. COLOR UTILITIES â€” Bootstrap 5.3 generates many of these at build time
+   ======================================================================== */
+.text-primary { color: var(--site-primary) !important; }
+.text-secondary { color: var(--site-secondary) !important; }
+.text-primary-emphasis { color: var(--site-primary-hover) !important; }
+.bg-primary { background-color: rgba(var(--site-primary-rgb), var(--bs-bg-opacity, 1)) !important; }
+.bg-secondary { background-color: rgba(var(--site-secondary-rgb), var(--bs-bg-opacity, 1)) !important; }
+.bg-primary-subtle { background-color: rgba(var(--site-primary-rgb), 0.12) !important; }
+.bg-secondary-subtle { background-color: rgba(var(--site-secondary-rgb), 0.12) !important; }
+.border-primary { border-color: rgba(var(--site-primary-rgb), var(--bs-border-opacity, 1)) !important; }
+.border-secondary { border-color: rgba(var(--site-secondary-rgb), var(--bs-border-opacity, 1)) !important; }
+.link-primary { color: rgba(var(--site-primary-rgb), var(--bs-link-opacity, 1)) !important; }
+.link-primary:hover, .link-primary:focus { color: var(--site-primary-hover) !important; }
+.link-secondary { color: rgba(var(--site-secondary-rgb), var(--bs-link-opacity, 1)) !important; }
+.link-secondary:hover, .link-secondary:focus { color: var(--site-secondary-hover) !important; }
+
+/* ========================================================================
+   D. BUTTONS â€” includes hover, active, disabled, and outline variants
+   ======================================================================== */
+/* All Bootstrap buttons: shape and padding use Section A; EDIT HERE: --bs-btn-font-weight controls label boldness. */
+.btn {
+  --bs-btn-border-radius: var(--site-radius);
+  --bs-btn-padding-y: var(--site-control-padding-y);
+  --bs-btn-padding-x: var(--site-control-padding-x);
+  --bs-btn-font-weight: 600;
+}
+/* Filled primary button: text, background, border, hover, active and disabled states; brand colours use Section A. EDIT HERE: #fff label contrast. */
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--site-primary);
+  --bs-btn-border-color: var(--site-primary);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--site-primary-hover);
+  --bs-btn-hover-border-color: var(--site-primary-hover);
+  --bs-btn-focus-shadow-rgb: var(--site-primary-rgb);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--site-primary-active);
+  --bs-btn-active-border-color: var(--site-primary-active);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: var(--site-primary);
+  --bs-btn-disabled-border-color: var(--site-primary);
+}
+/* Outlined primary button: outlines, hover fill, active and disabled states; uses brand values. EDIT HERE: #fff label contrast. */
+.btn-outline-primary {
+  --bs-btn-color: var(--site-primary);
+  --bs-btn-border-color: var(--site-primary);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--site-primary-hover);
+  --bs-btn-hover-border-color: var(--site-primary-hover);
+  --bs-btn-focus-shadow-rgb: var(--site-primary-rgb);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--site-primary-active);
+  --bs-btn-active-border-color: var(--site-primary-active);
+  --bs-btn-disabled-color: var(--site-primary);
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: var(--site-primary);
+}
+/* Filled secondary button: background/borders and interactive states; uses Section A. EDIT HERE: #fff label contrast. */
+.btn-secondary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--site-secondary);
+  --bs-btn-border-color: var(--site-secondary);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--site-secondary-hover);
+  --bs-btn-hover-border-color: var(--site-secondary-hover);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--site-secondary-active);
+  --bs-btn-active-border-color: var(--site-secondary-active);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: var(--site-secondary);
+  --bs-btn-disabled-border-color: var(--site-secondary);
+}
+/* Outlined secondary button: outlined, hover, selected and disabled; uses Section A. EDIT HERE: #fff label contrast. */
+.btn-outline-secondary {
+  --bs-btn-color: var(--site-secondary);
+  --bs-btn-border-color: var(--site-secondary);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--site-secondary-hover);
+  --bs-btn-hover-border-color: var(--site-secondary-hover);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--site-secondary-active);
+  --bs-btn-active-border-color: var(--site-secondary-active);
+  --bs-btn-disabled-color: var(--site-secondary);
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: var(--site-secondary);
+}
+
+/* ========================================================================
+   E. FORMS
+   ======================================================================== */
+/* Text inputs and select menus: border, corner radius, surface and text; Section A. */
+.form-control, .form-select {
+  border-color: var(--site-border);
+  border-radius: var(--site-radius);
+  background-color: var(--site-surface);
+  color: var(--site-text);
+}
+/* Inputs when focused: primary border and focus-ring glow; EDIT HERE 0.25rem for ring width. */
+.form-control:focus, .form-select:focus {
+  border-color: var(--site-primary);
+  box-shadow: 0 0 0 0.25rem var(--site-focus-ring);
+}
+/* Checked radio buttons and checkboxes: primary fill and border. */
+.form-check-input:checked {
+  background-color: var(--site-primary);
+  border-color: var(--site-primary);
+}
+/* Checkbox/radio keyboard focus glow: primary colour and focus ring. */
+.form-check-input:focus {
+  border-color: var(--site-primary);
+  box-shadow: 0 0 0 0.25rem var(--site-focus-ring);
+}
+.form-range::-webkit-slider-thumb { background-color: var(--site-primary); }
+.form-range::-moz-range-thumb { background-color: var(--site-primary); }
+.form-range:focus::-webkit-slider-thumb { box-shadow: 0 0 0 0.25rem var(--site-focus-ring); }
+.form-label { font-weight: 600; }
+
+/* ========================================================================
+   F. NAVIGATION, NAVBARS, AND DROPDOWNS
+   ======================================================================== */
+.navbar { --bs-navbar-brand-color: var(--site-heading); }
+.navbar-brand { font-weight: 700; }
+/* Light navbar links: normal, hover and active colours from Section A. */
+.navbar-light, .navbar[data-bs-theme="light"] {
+  --bs-navbar-color: var(--site-text);
+  --bs-navbar-hover-color: var(--site-primary);
+  --bs-navbar-active-color: var(--site-primary);
+}
+.nav-link:hover, .nav-link:focus { color: var(--site-link-hover); }
+.nav-pills { --bs-nav-pills-border-radius: var(--site-radius); }
+/* Active pill navigation: primary background. */
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link { background-color: var(--site-primary); }
+.nav-tabs .nav-link.active { color: var(--site-primary); }
+/* Dropdown menus: border, radius, hover background/text and selected item. EDIT HERE: #fff active item text contrast. */
+.dropdown-menu {
+  --bs-dropdown-border-radius: var(--site-radius);
+  --bs-dropdown-border-color: var(--site-border);
+  --bs-dropdown-link-hover-bg: var(--site-surface-muted);
+  --bs-dropdown-link-active-bg: var(--site-primary);
+  --bs-dropdown-link-active-color: #fff;
+  --bs-dropdown-link-hover-color: var(--site-text);
+}
+
+/* ========================================================================
+   G. CARDS, ACCORDIONS, MODALS, AND LIST GROUPS
+   ======================================================================== */
+/* Cards: surface background, border colour and large corner radius. */
+.card {
+  --bs-card-bg: var(--site-surface);
+  --bs-card-border-color: var(--site-border);
+  --bs-card-border-radius: var(--site-radius-lg);
+}
+.card-header { background-color: var(--site-surface-muted); }
+/* Accordion panels: surfaces/borders and expanded/focus states; EDIT HERE (0.1): expanded panel tint opacity. */
+.accordion {
+  --bs-accordion-bg: var(--site-surface);
+  --bs-accordion-border-color: var(--site-border);
+  --bs-accordion-border-radius: var(--site-radius);
+  --bs-accordion-btn-focus-border-color: var(--site-primary);
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem var(--site-focus-ring);
+  --bs-accordion-active-bg: rgba(var(--site-primary-rgb), 0.1);
+  --bs-accordion-active-color: var(--site-primary-hover);
+}
+/* Modal dialog surface, border and large corner radius. */
+.modal-content {
+  --bs-modal-bg: var(--site-surface);
+  --bs-modal-border-radius: var(--site-radius-lg);
+  --bs-modal-border-color: var(--site-border);
+}
+/* List groups: border and selected item primary highlight. */
+.list-group {
+  --bs-list-group-border-color: var(--site-border);
+  --bs-list-group-active-bg: var(--site-primary);
+  --bs-list-group-active-border-color: var(--site-primary);
+}
+
+/* ========================================================================
+   H. TABLES, PAGINATION, PROGRESS, BADGES, AND ALERTS
+   ======================================================================== */
+/* All Bootstrap tables: default text and grid border colours. */
+.table {
+  --bs-table-color: var(--site-text);
+  --bs-table-border-color: var(--site-border);
+}
+/* Primary-tinted tables: EDIT HERE (0.12â€“0.22): background, stripe, hover and active tint strengths. */
+.table-primary {
+  --bs-table-bg: rgba(var(--site-primary-rgb), 0.12);
+  --bs-table-border-color: rgba(var(--site-primary-rgb), 0.25);
+  --bs-table-color: var(--site-text);
+  --bs-table-striped-bg: rgba(var(--site-primary-rgb), 0.17);
+  --bs-table-hover-bg: rgba(var(--site-primary-rgb), 0.2);
+  --bs-table-active-bg: rgba(var(--site-primary-rgb), 0.22);
+}
+/* Pagination controls: link, hover, focus and active colours. */
+.pagination {
+  --bs-pagination-color: var(--site-primary);
+  --bs-pagination-hover-color: var(--site-primary-hover);
+  --bs-pagination-focus-color: var(--site-primary);
+  --bs-pagination-focus-box-shadow: 0 0 0 0.25rem var(--site-focus-ring);
+  --bs-pagination-active-bg: var(--site-primary);
+  --bs-pagination-active-border-color: var(--site-primary);
+}
+.progress { --bs-progress-bg: var(--site-surface-muted); }
+.progress-bar { background-color: var(--site-primary); }
+.badge { font-weight: 600; }
+/* Primary alert box: EDIT HERE (0.1 and 0.25): tint and border opacity. */
+.alert-primary {
+  --bs-alert-color: var(--site-primary-hover);
+  --bs-alert-bg: rgba(var(--site-primary-rgb), 0.1);
+  --bs-alert-border-color: rgba(var(--site-primary-rgb), 0.25);
+  --bs-alert-link-color: var(--site-primary-hover);
+}
+
+/* ========================================================================
+   I. OPTIONAL REUSABLE SITE CLASSES
+   ======================================================================== */
+.site-section { padding-block: var(--site-section-spacing); }
+.site-surface { background-color: var(--site-surface-muted); }
+.site-shadow { box-shadow: var(--site-shadow); }
+.site-shadow-lg { box-shadow: var(--site-shadow-lg); }
+.site-radius-lg { border-radius: var(--site-radius-lg); }
+/* Optional footer style: background, muted text and top border. */
+.site-footer {
+  background-color: var(--site-surface-muted);
+  color: var(--site-text-muted);
+  border-top: 1px solid var(--site-border);
+}
+
+/* ========================================================================
+   J. ACCESSIBILITY AND MOTION
+   ======================================================================== */
+/* Accessibility: minimizes animations for users who request reduced motion; normally leave unchanged. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
